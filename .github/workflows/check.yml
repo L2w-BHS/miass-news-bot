@@ -27,4 +27,4 @@ jobs:
       - name: Run news filter
         env:
           MIASS24APIKEY: ${{ secrets.MIASS24APIKEY }}
-        run: npm run check
+        run: npm run vk-check
