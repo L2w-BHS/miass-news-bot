@@ -6,8 +6,9 @@
   "description": "Автоматическая модерация предложенных новостей Миасса",
   "type": "module",
   "scripts": {
-    "check": "node src/check.js",
-    "start": "node src/check.js"
+  "check": "node src/check.js",
+  "vk-check": "node src/vk-check.js",
+  "start": "node src/check.js"
   },
   "engines": {
     "node": ">=20"
