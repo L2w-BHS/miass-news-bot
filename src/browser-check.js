@@ -6,20 +6,25 @@ async function main() {
   const page = await browser.newPage();
 
   try {
-    await page.goto("https://vk.com", {
-      waitUntil: "domcontentloaded",
-      timeout: 30000,
-    });
+    for (const url of [
+      "https://vk.com/miass24h",
+      "https://vk.com/interesnyimiass",
+    ]) {
+      await page.goto(url, {
+        waitUntil: "domcontentloaded",
+        timeout: 30000,
+      });
 
-    console.log("Браузер открыл VK.");
-    console.log("Заголовок страницы:", await page.title());
-    console.log("Пока только проверка браузера — без входа и публикаций.");
+      console.log("\nСтраница:", url);
+      console.log("Заголовок:", await page.title());
+      console.log("Текущий адрес:", page.url());
+    }
   } finally {
     await browser.close();
   }
 }
 
 main().catch((error) => {
-  console.error("Ошибка браузера:", error.message);
+  console.error("Ошибка:", error.message);
   process.exitCode = 1;
 });
