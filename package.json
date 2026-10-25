@@ -1,0 +1,15 @@
+
+{
+  "name": "miass-news-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Автоматическая модерация предложенных новостей Миасса",
+  "type": "module",
+  "scripts": {
+    "check": "node src/check.js",
+    "start": "node src/check.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
